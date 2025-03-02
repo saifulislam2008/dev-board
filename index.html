@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Dev Board</title>
+</head>
+
+<body class="py-10 bg-green-100">
+    <div class="navbar bg-base-100 shadow-sm container mx-auto p-4 rounded-xl">
+        <div class="flex-1 flex gap-2 items-center">
+            <img src='./assets/logo.png' alt='./assets/logo.png' class="" />
+            <span class="text-3xl">Dev<b>Board</b></span>
+        </div>
+        <div class="flex-none flex items-center gap-6">
+            <div class="flex gap-2 text-3xl items-center font-bold bg-blue-100 px-4 py-2 rounded-full">
+                <img src='./assets/checkbox.png' alt='./assets/checkbox.png' class="" />
+                <span id="completedTask">23</span>
+            </div>
+            <button onclick="changeBgColor()" class="btn btn-square btn-ghost bg-blue-100 size-[55px] rounded-full">
+                <img src='./assets/theme-btn.png' alt='./assets/theme-btn.png' class="" />
+            </button>
+        </div>
+    </div>
+    <main class=" container mx-auto py-4 grid gap-4 grid-cols-12">
+        <div class="bg-base-100 col-span-9 p-4 rounded-xl flex flex-col">
+            <!-- taskbar -->
+            <div class="flex gap-4">
+                <!-- task assigned -->
+                <div class="flex items-center bg-blue-100 flex-1 justify-center gap-4 rounded-xl">
+                    <div class="p-4 rounded-full bg-white">
+                        <img src='./assets/checkbox.png' alt='./assets/checkbox.png' />
+                    </div>
+                    <div>
+                        <p class="text-[#00303C]">Task Assigned</p>
+                        <h2 id="taskCount" class="text-3xl font-bold">06</h2>
+                    </div>
+                </div>
+                <!-- discover new something -->
+                <a href="blog.html" class="px-8 py-4 bg-blue-400 rounded-xl text-white flex items-center ">
+                    <img src='./assets/board.png' alt='./assets/board.png' class="" />
+                    <h2 class="text-2xl">Discover something new today.</h2>
+                </a>
+                <!-- date section -->
+                <div class="bg-blue-100 flex-1 rounded-xl flex gap-4 items-center justify-center">
+                    <div class="bg-white p-4 rounded-full">
+                        <img src='./assets/calender.png' alt='./assets/calender.png' />
+                    </div>
+                    <span id="calendar" class="text-xl font-semibold">wed,
+                        <br>
+                        <b>Jul 28 2025</b>
+                    </span>
+                </div>
+            </div>
+            <!-- task card container -->
+            <div class="divider"></div>
+            <!-- card container -->
+            <div id="cardContainer" class="p-4 bg-base-100 grid grid-cols-3 gap-4">
+
+            </div>
+        </div>
+        <div class="bg-base-100 col-span-3 p-4 rounded-xl">
+            <div class="flex flex-col items-center justify-center gap-4 py-6">
+                <div class="flex gap-2 items-center text-md font-semibold">
+                    <img src='./assets/activity.png' alt='./assets/activity.png' class="" />
+                    <span>
+                        Activity Log
+                    </span>
+                </div>
+                <button id="clearBTN" onclick="clearActivity()" class="px-4 py-2 rounded-lg bg-blue-600 text-white">Clear Activity</button>
+            </div>
+            <div class="divider"></div>
+            <div id="activity" class="flex flex-col gap-4">
+                <!-- <p class="px-4 py-2 bg-blue-100 rounded-xl text-gray-900/80">You have completed the task Add Dark Mode at 12:48:30 PM</p>
+                <p class="px-4 py-2 bg-blue-100 rounded-xl text-gray-900/80">You have completed the task Add Dark Mode at 12:48:30 PM</p>
+                <p class="px-4 py-2 bg-blue-100 rounded-xl text-gray-900/80">You have completed the task Add Dark Mode at 12:48:30 PM</p> -->
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
